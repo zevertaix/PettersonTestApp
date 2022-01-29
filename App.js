@@ -1,20 +1,23 @@
+import { Provider } from 'react-redux'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Navigator from './src/navigation';
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
+import { store } from "./src/store/configureStore";
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    'Vag-World': require('./assets/fonts/vag-world-bold.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}> 
+      <StatusBar hidden />
+      <Navigator />
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
