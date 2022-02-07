@@ -32,7 +32,7 @@ function PhotosScreen () {
         <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false} howsHorizontalScrollIndicator={false}>
           { 
             searchList.map((item, index)=>(
-              <Card key={item.url} imageSource={item.url} title={item.title} index={index}/>
+              <Card key={item.url} item={item} />
             ))
           }
         </ScrollView>
