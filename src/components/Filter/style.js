@@ -22,6 +22,8 @@ export default StyleSheet.create({
   },
   listButton: {
     marginVertical: 10,
-    flexDirection: "row"
+    flexDirection: "row", 
+    alignItems: "center",
+    justifyContent: "space-between"
   }
 })
