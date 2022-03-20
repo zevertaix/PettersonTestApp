@@ -13,9 +13,30 @@ export default StyleSheet.create({
     fontFamily: "Vag-World",
     fontSize: 30,
     opacity: 0.8,
-    paddingHorizontal: 15
+    paddingHorizontal: 15,
+    lineHeight: 42,
+    textAlign: "justify"
   },
   scroll: {
-    marginTop: 10
+    marginTop: 10,
+    zIndex: -1
+  },
+  backButton: {
+    padding: 0,
+    marginBottom: 20
+  },
+  textBackButton: {
+    color: "#ffffffb8",
+    textAlign: "center",
+    fontSize: 30
+  },
+  image: {
+    width: '100%', 
+    height: 300,
+    borderRadius: 10,
+  },
+  buttonsBar: {
+    flexDirection: "row",
+    justifyContent: "space-between"
   }
 })

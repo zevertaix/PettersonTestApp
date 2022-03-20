@@ -6,6 +6,7 @@ export default StyleSheet.create({
     padding: 12,
     backgroundColor: "#2e2d42",
     borderRadius: 40,
+    width: "80%"
   },
   search: {
     backgroundColor: "#2e2d42",

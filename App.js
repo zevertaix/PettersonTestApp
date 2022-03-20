@@ -3,7 +3,10 @@ import { StatusBar } from 'expo-status-bar';
 import Navigator from './src/navigation';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
-import { store } from "./src/store/configureStore";
+import getStore from "./src/store/configureStore";
+import { PersistGate } from 'redux-persist/integration/react'
+
+const {store, persistor} = getStore()
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -16,8 +19,10 @@ export default function App() {
 
   return (
     <Provider store={store}> 
-      <StatusBar hidden />
-      <Navigator />
+      <PersistGate loading={null} persistor={persistor}>
+        <StatusBar hidden />
+        <Navigator />
+      </PersistGate>
     </Provider>
   );
 }

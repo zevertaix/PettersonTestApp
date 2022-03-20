@@ -5,6 +5,7 @@ import PhotosScreen from '../screens/PhotosScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import StackNavigator from "./StackNavigator";
 
 
 const Tab = createBottomTabNavigator();
@@ -28,7 +29,7 @@ export default () => (
       tabBarLabel:() => {return null},
       tabBarIcon: ({ focused, color, size }) => {
         let iconName;
-        if (route.name === 'Photos') {
+        if (route.name === 'StackNavigator') {
           iconName = focused
           ? 'home-sharp'
           : 'home-outline';
@@ -40,7 +41,7 @@ export default () => (
       tabBarActiveTintColor: '#25bc49',
       tabBarInactiveTintColor: 'gray',
     })} >
-      <Tab.Screen name="Photos" component={PhotosScreen} />
+      <Tab.Screen name="StackNavigator" component={StackNavigator} />
       <Tab.Screen name="Favorites" component={FavoritesScreen} />
     </Tab.Navigator>
   </NavigationContainer>

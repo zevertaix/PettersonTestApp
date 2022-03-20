@@ -29,6 +29,6 @@ export default StyleSheet.create({
   title: {
     color: '#fff',
     fontWeight: "400",
-    fontSize: 15
+    fontSize: 16
   }
 })

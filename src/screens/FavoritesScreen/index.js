@@ -4,7 +4,7 @@ import { View, Text, ScrollView } from 'react-native';
 import Card from '../../components/Card/index.js';
 import { useSelector } from 'react-redux';
 
-function FavoritesScreen () {
+function FavoritesScreen ({navigation}) {
   const favoritesList = useSelector((store)=> store.favorites.list);
 
   return (
@@ -13,7 +13,7 @@ function FavoritesScreen () {
         <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
           {
             favoritesList.map((item, index)=>(
-              <Card key={item.url} item={item}/>
+              <Card key={item.url} item={item} navigation={navigation}/>
             ))
           }
         </ScrollView>
