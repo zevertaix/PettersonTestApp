@@ -12,7 +12,6 @@ function Filter () {
   const dispatch = useDispatch()
   const orderKey = useSelector((store) => store.photos.order) 
 
-
   const toggleSort = (key) => {
     if(orderKey !== key){
       dispatch(setOrderKey(key))

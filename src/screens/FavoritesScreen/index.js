@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from '../style.js'
 import { View, Text, ScrollView } from 'react-native';
 import Card from '../../components/Card/index.js';
